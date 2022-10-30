@@ -25,14 +25,49 @@ Data Definitions: https://cdn.upgrad.com/UpGrad/temp/87f67e28-c47e-4725-ae3c-111
 
 Dataset: https://ml-course3-upgrad.s3.amazonaws.com/Assignment_+Advanced+Regression/train.csv
 
-### Final Conclusions
-##Conclusion from House Price Prediction analysis:
-
-- 
+### EDA Analysis:
+- Analsysed data with different visualization plots.
+- There are few outliers and they are removed.
+- There are few missing values and filled those missing values with appropriate choice( zero or mean or median or 'None').
+ From the correlation plot, one can observe that a lot of corrleated features are in the data set, I followed RFE and regularization method to remove correlated features and selected the final set of best predictor variables.
 
 ##Model Building and Evaluation Conclusion:
 
-- 
+- Both Ridge and Lasso regressions performed similar on this dataset, However I would like to take Lasso as the best performed model because of fewer predictor variables.
+
+- Ridge Regression Performance:
+  - Ridge Number of non-zero Coefficients 50
+  - MSE Train 0.0011340223199113653
+  - RMSE Train 0.03367524788195872
+  - MAE Score Train 0.023621151194653998
+  - R2 Score Train 0.9037419157664696 
+
+  - MSE Test 0.0011608495220026408
+  - RMSE Test 0.03407124186176137
+  - MAE Score Test 0.02477157200853807
+  - R2 Score Test 0.8979619290976839 
+
+- Lasso Regression Performance:
+  - Lasso Number of non-zero Coefficients 30
+  - MSE Train 0.001154427841141163
+  - RMSE Train 0.03397687215064334
+  - MAE Score Train 0.0237527385178099
+  - R2 Score Train 0.9020098542833054 
+
+  - MSE Test 0.0011809747032773916
+  - RMSE Test 0.03436531250079638
+  - MAE Score Test 0.025035683883856817
+  - R2 Score Test 0.8961929361016818 
+ 
+- As you can see with the help of 30 predictor variables Lasso regression can achieve same results as Ridge regression.
+
+- Top five features from Ridge regression are ,GrLivArea,OverallQual_10,1stFlrSF,2ndFlrSF,BsmtFinSF1
+- The Optimum Lamda Value(regularization parameter) for Ridge regression is 2
+
+- Top five features from Lasso regression are ,GrLivArea,OverallQual_10,OverallQual_9,TotalBsmtSF,YearBuilt
+- The Optimum Lamda Value(regularization parameter) for Lasso regression is 0.0001
+
+- All assumptions of Multiple Linear Regression are met( Homoscedasticity, error terms are normal distributed, error terms are independent of each other, linear relationship between predictor variables and Target variable)
 
 ## Technologies Used
 - pandas - version 1.2.4
