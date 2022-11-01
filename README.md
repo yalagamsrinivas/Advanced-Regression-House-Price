@@ -1,12 +1,13 @@
-<h1> Advanced-Regression-House-Price </h1> 
-Brief description of the project:
+<h1> Advanced-Regression-House-Price-Prediction </h1> 
+
+##Brief description of the project:
 
 - A US-based housing company named Surprise Housing has decided to enter the Australian market. The company uses data analytics to purchase houses at a price below their actual values and flip them on at a higher price. For the same purpose, the company has collected a data set from the sale of houses in Australia. 
 The data is provided in the CSV file below.
 
 The company is looking at prospective properties to buy to enter the market. You are required to build a regression model using regularisation in order to predict the actual value of the prospective properties and decide whether to invest in them or not.
 
-The company wants to know:
+#The company wants to know:
 
 Which variables are significant in predicting the price of a house, and
 
@@ -26,7 +27,7 @@ Data Definitions: https://cdn.upgrad.com/UpGrad/temp/87f67e28-c47e-4725-ae3c-111
 Dataset: https://ml-course3-upgrad.s3.amazonaws.com/Assignment_+Advanced+Regression/train.csv
 
 ### EDA Analysis:
-- Analsysed data with different visualization plots.
+- Analyzed data with different visualization plots.
 - There are few outliers and they are removed.
 - There are few missing values and filled those missing values with appropriate choice( zero or mean or median or 'None').
  From the correlation plot, one can observe that a lot of corrleated features are in the data set, I followed RFE and regularization method to remove correlated features and selected the final set of best predictor variables.
@@ -69,6 +70,14 @@ Dataset: https://ml-course3-upgrad.s3.amazonaws.com/Assignment_+Advanced+Regress
 
 - All assumptions of Multiple Linear Regression are met( Homoscedasticity, error terms are normal distributed, error terms are independent of each other, linear relationship between predictor variables and Target variable)
 
+- Most Dominent Features:
+    - GrLivArea: Above grade (ground) living area square feet
+    - OverallQual: Rates the overall material and finish of the house
+       - 10	Very Excellent
+       - 9	Excellent
+    - TotalBsmtSF: Total square feet of basement area
+    - YearBuilt: Original construction date
+	
 ## Technologies Used
 - pandas - version 1.2.4
 - numpy - version 1.20.1
